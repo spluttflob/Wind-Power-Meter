@@ -23,7 +23,14 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Wind Power Power Meter", "index.html", [
-    [ "Wind-Power-Meter", "md__r_e_a_d_m_e.html", null ],
+    [ "Wind-Power-Meter", "index.html", [
+      [ "Hardware", "index.html#autotoc_md1", null ],
+      [ "Software", "index.html#autotoc_md2", [
+        [ "Pi Setup", "index.html#autotoc_md3", null ],
+        [ "Dependencies", "index.html#autotoc_md4", null ],
+        [ "VNC Issues", "index.html#autotoc_md5", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

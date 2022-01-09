@@ -6,6 +6,8 @@ The hardware consists of a circuit board designed in the style of a Raspberry
 Pi HAT, but it's not an official HAT because an identifier ROM which is part of
 the HAT specification isn't present.  Call it a "Cap" or something. 
 
+![Images of Circuit Board](WindPower_HAT_E.png)
+
 The board uses a pair of Hall-effect current sensors to measure the current
 output of the wind turbine; it is expected that the output will be somewhat
 dirty DC, and simple filtering is provided.  Voltage dividers reduce the
@@ -16,6 +18,9 @@ I^2^C interface with the Raspberry Pi.
 ## Software
 It's just a Python program which gets data from the ADS112C04 and plots some 
 plots. 
+
+The software documentation page is at 
+<https://spluttflob.github.io/Wind-Power-Meter/>.
 
 ### Pi Setup
 When setting up a Raspberry Pi, one must enable the I^2^C interface using
