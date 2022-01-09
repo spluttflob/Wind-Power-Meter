@@ -6,7 +6,7 @@ The hardware consists of a circuit board designed in the style of a Raspberry
 Pi HAT, but it's not an official HAT because an identifier ROM which is part of
 the HAT specification isn't present.  Call it a "Cap" or something. 
 
-![Images of Circuit Board](WindPower_HAT_E.png)
+![Images of Circuit Board](/home/jr/src/python/windy/Wind-Power-Meter/WindPower_HAT_E.png)
 
 The board was designed in the standalone version of Autodesk&trade; Eagle PCB
 and the schematic and board files are in the `hardware` directory.

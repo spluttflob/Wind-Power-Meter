@@ -70,15 +70,16 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h1><a class="anchor" id="autotoc_md1"></a>
 Hardware</h1>
 <p>The hardware consists of a circuit board designed in the style of a Raspberry Pi HAT, but it's not an official HAT because an identifier ROM which is part of the HAT specification isn't present. Call it a "Cap" or something.</p>
-<p><img src="WindPower_HAT_E.png" alt="Images of Circuit Board" class="inline"/></p>
-<p>The board uses a pair of Hall-effect current sensors to measure the current output of the wind turbine; it is expected that the output will be somewhat dirty DC, and simple filtering is provided. Voltage dividers reduce the voltage output of the turbine to safe levels. Voltage and current are then digitized with an ADS112C04 analog to digital converter that talks over an I^2^C interface with the Raspberry Pi.</p>
+<p><img src="/home/jr/src/python/windy/Wind-Power-Meter/WindPower_HAT_E.png" alt="Images of Circuit Board" class="inline"/></p>
+<p>The board was designed in the standalone version of Autodesk&trade; Eagle PCB and the schematic and board files are in the <code>hardware</code> directory.</p>
+<p>The board uses a pair of Hall-effect current sensors to measure the current output of the wind turbine; it is expected that the output will be somewhat dirty DC, and simple filtering is provided. Voltage dividers reduce the voltage output of the turbine to safe levels. Voltage and current are then digitized with an ADS112C04 analog to digital converter that talks over an I<sup>2</sup>C interface with the Raspberry Pi.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Software</h1>
 <p>It's just a Python program which gets data from the ADS112C04 and plots some plots.</p>
 <p>The software documentation page is at <a href="https://spluttflob.github.io/Wind-Power-Meter/">https://spluttflob.github.io/Wind-Power-Meter/</a>.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Pi Setup</h2>
-<p>When setting up a Raspberry Pi, one must enable the I^2^C interface using <code>raspi-setup</code> or the <b>Raspberry Pi Configuration</b> program from the desktop's applications menu. It's often a good idea to enable <b>SSH</b>, the <b>VNC</b> remote desktop, and <b>SPI</b> as well.</p>
+<p>When setting up a Raspberry Pi, one must enable the I<sup>2</sup>C interface using <code>raspi-setup</code> or the <b>Raspberry Pi Configuration</b> program from the desktop's applications menu. It's often a good idea to enable <b>SSH</b>, the <b>VNC</b> remote desktop, and <b>SPI</b> as well.</p>
 <p>This software is designed to run on a "headless" Raspberry Pi. It has been tested on the October 2021 release of Raspberry Pi OS. There's a nice page showing how to set up a "headless" (no monitor) Raspberry Pi at <a href="https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html">https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html</a>.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Dependencies</h2>
@@ -89,8 +90,8 @@ Dependencies</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md5"></a>
 VNC Issues</h2>
-<p>The Remmina client on a Linux PC has problems authenticating with the VNC desktop server on the Pi unless one adds the line <code>Authentication=VncAuth</code> to the file <code>/root/.vnc/config.d/vncserver-x11</code> on the Pi and then restarts the VNC server on the Pi with a command such as <code>systemctl restart vncserver-x11-serviced</code> (or a reboot). <br  />
- Other clients such as those for Windows&trade; or MacOS&trade; may or may not require such action to be taken. </p>
+<p>The Remmina client on a Linux PC has problems authenticating with the VNC desktop server on the Pi unless one adds the line <code>Authentication=VncAuth</code> to the file <code>/root/.vnc/config.d/vncserver-x11</code> on the Pi and then restarts the VNC server on the Pi with a command such as <code>systemctl restart vncserver-x11-serviced</code> (or a reboot).</p>
+<p>Other clients such as those for Windows&trade; or MacOS&trade; may or may not require such action to be taken. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
