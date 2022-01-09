@@ -8,12 +8,15 @@ the HAT specification isn't present.  Call it a "Cap" or something.
 
 ![Images of Circuit Board](WindPower_HAT_E.png)
 
+The board was designed in the standalone version of Autodesk&trade; Eagle PCB
+and the schematic and board files are in the `hardware` directory.
+
 The board uses a pair of Hall-effect current sensors to measure the current
 output of the wind turbine; it is expected that the output will be somewhat
 dirty DC, and simple filtering is provided.  Voltage dividers reduce the
 voltage output of the turbine to safe levels.  Voltage and current are then
 digitized with an ADS112C04 analog to digital converter that talks over an
-I^2^C interface with the Raspberry Pi. 
+I<sup>2</sup>C interface with the Raspberry Pi. 
 
 ## Software
 It's just a Python program which gets data from the ADS112C04 and plots some 
@@ -23,10 +26,10 @@ The software documentation page is at
 <https://spluttflob.github.io/Wind-Power-Meter/>.
 
 ### Pi Setup
-When setting up a Raspberry Pi, one must enable the I^2^C interface using
-`raspi-setup` or the **Raspberry Pi Configuration** program from the desktop's
-applications menu.  It's often a good idea to enable **SSH**, the **VNC** 
-remote desktop, and **SPI** as well. 
+When setting up a Raspberry Pi, one must enable the I<sup>2</sup>C interface 
+using `raspi-setup` or the **Raspberry Pi Configuration** program from the 
+desktop's applications menu.  It's often a good idea to enable **SSH**, the 
+**VNC** remote desktop, and **SPI** as well. 
 
 This software is designed to run on a "headless" Raspberry Pi. It has been
 tested on the October 2021 release of Raspberry Pi OS. 
@@ -47,7 +50,8 @@ The Remmina client on a Linux PC has problems authenticating with the VNC
 desktop server on the Pi unless one adds the line `Authentication=VncAuth` 
 to the file `/root/.vnc/config.d/vncserver-x11` on the Pi and then restarts 
 the VNC server on the Pi with a command such as 
-`systemctl restart vncserver-x11-serviced` (or a reboot).  
+`systemctl restart vncserver-x11-serviced` (or a reboot). 
+
 Other clients such as those for Windows&trade; or MacOS&trade; may or may not 
 require such action to be taken. 
 
