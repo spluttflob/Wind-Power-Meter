@@ -100,7 +100,7 @@ class TurboHAT:
         # Set the reference voltage and data rate in config. register 1
         self._i2c_bus.write_byte_data (self._address,
                         TurboHAT.CMD_WREG | (TurboHAT.REG_CFG_1 << 2),
-                        self._ref_voltage | _self.data_rate)
+                        self._ref_voltage | self._data_rate)
 
 
     def clean_up (self):

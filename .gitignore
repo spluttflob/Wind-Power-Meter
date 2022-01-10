@@ -130,4 +130,5 @@ dmypy.json
 
 # Custom stuff
 unused
-doxygen-awesome.css
+Doxyfile
+.gitignore

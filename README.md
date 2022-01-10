@@ -45,6 +45,9 @@ One needs the **PySimpleGUI** package for plotting as well as **Matplotlib**.
 
 * To install PySimpleGUI, run `sudo pip3 install pysimplegui` on the Pi.
 
+* The web application is still being debugged.  It might help to run 
+  `sudo pip3 install pysimpleguiweb htmlparser` on the Pi to begin. 
+
 ### VNC Issues
 The Remmina client on a Linux PC has problems authenticating with the VNC 
 desktop server on the Pi unless one adds the line `Authentication=VncAuth` 
