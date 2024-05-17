@@ -1,6 +1,6 @@
 # Hardware
 
-Here are schematics done in standalone Autodesk&trade; Eagle PCB.
+Here are a schematic and board layout done in standalone Autodesk&trade; Eagle PCB.
 They should be easy to import into the Fusion 260&trade; version of Eagle
 or into KiCAD (recommended). 
 
